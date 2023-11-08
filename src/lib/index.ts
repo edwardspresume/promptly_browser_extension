@@ -1,1 +1,8 @@
-// place files you want to import through the `$lib` alias in this folder.
+import type { AuthActionMessage, AuthActionResponseHandler } from './types';
+
+export const sendAuthActionToServiceWorker = (
+	message: AuthActionMessage,
+	callback: AuthActionResponseHandler = () => {}
+) => {
+	chrome.runtime.sendMessage(message, callback);
+};
