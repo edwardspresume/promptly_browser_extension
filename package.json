@@ -7,7 +7,7 @@
 		"viteBuild": "vite build",
 		"esbuildBundle": "pnpx esbuild src/lib/serviceWorkers/mainServiceWorker.ts --bundle --format=esm --minify --outdir=build/",
 		"fullBuild": "pnpm viteBuild && pnpm esbuildBundle",
-		"watchExtension": "nodemon --watch src --watch static --ext json,ts,js,css,html,svelte --exec \"pnpm fullBuild\"",
+		"watchExtension": "nodemon --watch src --watch static --ext json,ts,js,css,postcss,html,svelte --exec \"pnpm fullBuild\"",
 		"preview": "vite preview",
 		"test": "npm run test:integration && npm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
