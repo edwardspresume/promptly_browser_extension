@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"viteBuild": "vite build",
-		"esbuildBundle": "pnpx esbuild src/lib/serviceWorkers/mainServiceWorker.ts --bundle --format=esm --minify --splitting --outdir=build/",
+		"esbuildBundle": "pnpx esbuild src/lib/serviceWorkers/mainServiceWorker.ts --bundle --format=esm --minify --outdir=build/",
 		"fullBuild": "pnpm viteBuild && pnpm esbuildBundle",
 		"watchExtension": "nodemon --watch src --watch static --ext json,ts,js,css,html,svelte --exec \"pnpm fullBuild\"",
 		"preview": "vite preview",
